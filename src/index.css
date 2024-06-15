@@ -1,0 +1,36 @@
+.p-5 {
+    padding: 10px;
+}
+
+.w-50 {
+    width: 500px;
+}
+
+.mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.ml-5 {
+    margin-left: 10px;
+
+}
+.mt-5 {
+    margin-top: 10px;
+}
+
+.flex {
+    display: flex;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.w-full {
+    width: 100%;
+}

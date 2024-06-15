@@ -1,0 +1,85 @@
+{
+    "1": {
+        "id": "1",
+        "title": "Does your business operate in CA?",
+        "type": "boolean",
+        "onSuccessNextQuestionId": "2",
+        "onFailureNextQuestionId": "-1",
+        "constraintSuccess": [
+            {
+                "operation": "truthy",
+                "operator": "boolean",
+                "value": true
+            }
+        ],
+        "constraintFailure": []
+    },
+    "2": {
+        "id": "2",
+        "title": "How many employees do you have?",
+        "type": "number",
+        "onSuccessNextQuestionId": "3",
+        "onFailureNextQuestionId": "-1",
+        "constraintSuccess": [
+            {
+                "operation": "compare",
+                "operator": "lessThan",
+                "value": "101"
+            },
+            {
+                "operation": "compare",
+                "operator": "greaterThan",
+                "value": "0"
+            }
+        ],
+        "constraintFailure": [
+            {
+                "operation": "compare",
+                "operator": "greaterThan",
+                "value": "100"
+            }
+        ]
+    },
+    "3": {
+        "id": "3",
+        "title": "Do you serve food?",
+        "type": "boolean",
+        "onSuccessNextQuestionId": "4",
+        "onFailureNextQuestionId": "6",
+        "constraintSuccess": [
+            {
+                "operation": "equal",
+                "operator": "boolean",
+                "value": true
+            }
+        ],
+        "constraintFailure": []
+    },
+    "4": {
+        "id": "4",
+        "title": "Do you serve hot food?",
+        "type": "boolean",
+        "onSuccessNextQuestionId": "5",
+        "onFailureNextQuestionId": "5",
+        "constraintSuccess": [],
+        "constraintFailure": []
+    },
+    "5": {
+        "id": "5",
+        "title": "Are you open past midnight?",
+        "type": "boolean",
+        "onSuccessNextQuestionId": "6",
+        "onFailureNextQuestionId": "6",
+        "constraintSuccess": [],
+        "constraintFailure": []
+    },
+    "6": {
+        "id": "6",
+        "title": "Do you host live music?",
+        "type": "boolean",
+        "onSuccessNextQuestionId": "-1",
+        "onFailureNextQuestionId": "-1",
+        "constraintSuccess": [],
+        "constraintFailure": []
+    }
+}
